@@ -19,6 +19,9 @@
     "test": "gulp build:production && karma start --single-run",
     "preinstall": "echo \"$(cat package.json)\""
   },
+  "bin": { 
+    "myGulp": "./myGulp.js"
+  },
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^5.8.3",
