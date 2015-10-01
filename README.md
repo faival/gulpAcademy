@@ -4,7 +4,7 @@ This exercise will force you to debug this big gulp project. During the exercise
 
 Bring in [node-inspector](https://www.npmjs.com/package/node-inspector) debug tool into project and start debugging!
 
-Note, please **do not** install it as a global dependency. In order to use this depencency in our project only in development enviroment, we will list it in the according section of package.json. Then we will run the `npm install` command again, and we'll use this as a **development only** feature.
+Note, please **do not** install it as a global dependency. In order to use this depencency, only in our development enviroment, we will list it in the according section of package.json. Then we will run the `npm install` command again, and we'll use this as a **development only** feature.
 
 ```bash
 ./node_modules/node-inspector/bin/node-debug.js ./node_modules/gulp/bin/gulp.js --gulpfile ./gulpfile.js
