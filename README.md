@@ -27,7 +27,7 @@ Afer this:
 
 #### B) Running a production install 
 
-* run `for package in \`ls node_modules\`; do npm uninstall $package; done;`
+* run ```for package in `ls node_modules`; do npm uninstall $package; done;```
 * run `npm install --production`
 * run `npm run gulp`
 
