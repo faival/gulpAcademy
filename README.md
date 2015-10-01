@@ -1,5 +1,7 @@
 # Exercise 1, branch gulpDebug.
 
+This exercise will force you to debug this big gulp project. During the exercise concepts like *sequence of tasks*, *live debugging*, *target vs. src I/O operations*, *streams vs callbacks* and *configuration* will be exposed.
+
 Bring in [node-inspector](https://www.npmjs.com/package/node-inspector) debug tool into project and start debugging!
 
 Note, please **do not** install it as a global dependency. In order to use this depencency in our project only in development enviroment, we will list it in the according section of package.json. Then we will run the `npm install` command again, and we'll use this as a **development only** feature.
@@ -33,7 +35,7 @@ parallel:
 
 
 
-#### D) Where can I find/modify the configuration of general tasks
+#### D) Where can I find/modify the configuration of general tasks.
 
 gulpfile.js/config.js
 
@@ -47,13 +49,13 @@ gulpfile.js/config.js
 
 
 
-#### F) Why is the output of the *generateIconSass.js* writing a file under src/* and not under public/* (the target build folder) ?
+#### F) Why is the output of the *generateIconSass.js* writing a file under *src/* and not under *public/* (the target build folder)?
 
 `_icon.sass` is a src file from sass, it will be used/needed by other mixins and sass files to access icon fonts by variable name and place the proper style selectors.
 
 
 
-#### G) Compare the tasks `clean` and `css`, why one is using the *callback mechanism* and the other one the *return stream mechanism*
+#### G) Compare the tasks `clean` and `css`, why one is using the *callback mechanism* and the other one the *return stream mechanism*?
 
 [Gulp Asyn Tasks support](https://github.com/gulpjs/gulp/blob/master/docs/API.md#async-task-support)
 
