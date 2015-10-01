@@ -24,6 +24,19 @@ Afer this:
   * run `npm install` again
   * run `npm run gulp`
 
+
+#### B) Running a production install 
+
+* run `for package in `ls node_modules`; do npm uninstall $package; done;`
+* run `npm install --production`
+* run `npm run gulp`
+
+What is happening? Why I can get the script gulp to work again?
+
+--production flag, tells node to install only the dependencies listed in `dependencies` key of package.json
+[npm-install](https://docs.npmjs.com/cli/install)
+
+
 #### B) Provide a script that prints the package.json configuration of the project into the CLI before installation.
 
 - [npm-scripts](https://docs.npmjs.com/misc/scripts)
@@ -33,12 +46,9 @@ Afer this:
 #### C) Generate a myGulp.js script at the root of the project.
 The script should output some logs in the command line, like "Hello world Scripting!".
 
-* Note that to make a .js file executable by node we'll have to add the following at the top of the file `#! /usr/bin/env node`
-[node command line tool](http://javascriptplayground.com/blog/2012/08/writing-a-command-line-node-tool/)
+* Note that to make a .js file executable by node we'll have to add the following at the top of the file `#! /usr/bin/env node` [node command line tool](http://javascriptplayground.com/blog/2012/08/writing-a-command-line-node-tool/)
 
-* Set a bin property under package.json that will generate an executable script under /Users/your_user_name/.nvm/v0.10.30/bin after performing a global installation of your package.
-
-[bin property of package.json](https://docs.npmjs.com/files/package.json#bin)
+* Set a bin property under package.json that will generate an executable script under /Users/your_user_name/.nvm/v0.10.30/bin after performing a global installation of your package. [bin property of package.json](https://docs.npmjs.com/files/package.json#bin)
 
 
 
