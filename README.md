@@ -1,4 +1,4 @@
-# Exercise 1, branch gulpDebug.
+# *Debugging gulp tasks*, branch gulpDebug.
 
 This exercise will force you to debug this big gulp project. During the exercise concepts like *sequence of tasks*, *live debugging*, *target vs. src I/O operations*, *streams vs callbacks* and *configuration* will be exposed.
 
@@ -9,7 +9,11 @@ Note, please **do not** install it as a global dependency. In order to use this 
 ```bash
 ./node_modules/node-inspector/bin/node-debug.js ./node_modules/gulp/bin/gulp.js --gulpfile ./gulpfile.js
 ```
-#### A) Trace back using the tool which tasks will be executed for default/development environment
+
+You can also use [gulp-util](https://www.npmjs.com/package/gulp-util), and [gulp-debug](https://www.npmjs.com/package/gulp-debug) along the source code of the tasks to produce usefull logs and discover what are the tasks doing...
+
+
+#### A) Trace back using the tools which tasks will be executed for default/development environment
 
 - place breakpoint in l.6 of default.js
 
