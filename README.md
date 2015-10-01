@@ -1,3 +1,8 @@
+# The gulpAcademy, getting to know NPM, Node, and gulp using the [gulp-starter](https://github.com/vigetlabs/gulp-starter) project.
+
+![Gulp Starter](src/images/gulp-starter-logo.png)
+
+
 # *Debugging gulp tasks*, branch gulpDebug.
 
 This exercise will force you to debug this big gulp project. During the exercise concepts like *sequence of tasks*, *live debugging*, *target vs. src I/O operations*, *streams vs callbacks* and *configuration* will be exposed.
