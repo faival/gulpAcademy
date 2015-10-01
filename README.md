@@ -1,21 +1,9 @@
-# The gulpAcademy, getting to know NPM, Node, and gulp using the [gulp-starter](https://github.com/vigetlabs/gulp-starter) project.
+# *Hands on NPM*, branch npmHandsOn.
 
-![Gulp Starter](src/images/gulp-starter-logo.png)
+This exercise will expose the basics of Node Package Manager, here after refered as *NPM*.
 
-
-# *Debugging gulp tasks*, branch gulpDebug.
-
-This exercise will force you to debug this big gulp project. During the exercise concepts like *sequence of tasks*, *live debugging*, *target vs. src I/O operations*, *streams vs callbacks* and *configuration* will be exposed.
-
-Bring in [node-inspector](https://www.npmjs.com/package/node-inspector) debug tool into project and start debugging!
-
-Note, please **do not** install it as a global dependency. In order to use this depencency, only in our development enviroment, we will list it in the according section of package.json. Then we will run the `npm install` command again, and we'll use this as a **development only** feature.
-
-```bash
-./node_modules/node-inspector/bin/node-debug.js ./node_modules/gulp/bin/gulp.js --gulpfile ./gulpfile.js
-```
-
-You can also use [gulp-util](https://www.npmjs.com/package/gulp-util), and [gulp-debug](https://www.npmjs.com/package/gulp-debug) along the source code of the tasks to produce usefull logs and discover what are the tasks doing...
+[package.json interactive guide](http://browsenpm.org/package.json)
+[package.json npm docs](https://docs.npmjs.com/files/package.json)
 
 
 #### A) Trace back using the tools which tasks will be executed for default/development environment
