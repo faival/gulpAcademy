@@ -16,7 +16,8 @@
     "production": "gulp build:production && gulp server",
     "gulp": "gulp",
     "development": "gulp",
-    "test": "gulp build:production && karma start --single-run"
+    "test": "gulp build:production && karma start --single-run",
+    "preinstall": "echo \"$(cat package.json)\""
   },
   "dependencies": {},
   "devDependencies": {
