@@ -6,11 +6,25 @@ Note, please **do not** install it as a global dependency. In order to use this 
 ./node_modules/node-inspector/bin/node-debug.js ./node_modules/gulp/bin/gulp.js --gulpfile ./gulpfile.js
 ```
 
-## Trace back using the tool which tasks will be executed for default/development environment
+## A) Trace back using the tool which tasks will be executed for default/development environment
 
 - place breakpoint in l.6 of default.js
 
-## What is going to be the order of execution of such tasks, which parallel and which sequential?
+## B) Which is going to be the order of execution of such tasks, which parallel and which sequential?
 
 [gulp-sequence](https://www.npmjs.com/package/gulp-sequence)
+
+secuential: clean > tasks.assetTasks > tasks.codeTasks > watch
+
+parallel:
+
+ tasks.assetTasks > ["fonts", "iconFont", "images", "svgSprite"]
+
+ tasks.codeTasks > ["html", "css", "webpack:watch"]
+
+
+ ## C) Which files are going to be removed on clean task?
+
+ ["public/rev-manifest.json", "public/javascripts/**/*.{js,map}", "public/stylesheets/**/*.{sass,scss,css,map}", "public/**/*.{html,json,map}", "public/images/**/*.{jpg,png,svg,gif,map}", "public/fonts/**/*.{woff2,woff,eot,ttf,svg,map}", "public/fonts/**/*.{woff2,woff,eot,ttf,svg,map}", "public/images/**/*.{svg,map}", "!node_modules/**/*", "!src/**/*"]
+
 
