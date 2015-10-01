@@ -23,7 +23,7 @@ parallel:
  tasks.codeTasks > ["html", "css", "webpack:watch"]
 ```
 
-#### C) Which files are going to be removed on clean task? Which files will never be removed
+#### C) Which files are going to be removed on clean task? Which files will never be removed?
 
  ["public/rev-manifest.json", "public/javascripts/**/*.{js,map}", "public/stylesheets/**/*.{sass,scss,css,map}", "public/**/*.{html,json,map}", "public/images/**/*.{jpg,png,svg,gif,map}", "public/fonts/**/*.{woff2,woff,eot,ttf,svg,map}", "public/fonts/**/*.{woff2,woff,eot,ttf,svg,map}", "public/images/**/*.{svg,map}", "!node_modules/**/*", "!src/**/*"]
 
@@ -35,9 +35,9 @@ gulpfile.js/config.js
 
 #### E) Change the name of the generated sass file _icons.sass to something else at runtime without modifying the src code.
 
-- place breakpoint in gulpfile.js/tasks/iconFont/index.js
+- place breakpoint in l.9 of gulpfile.js/tasks/iconFont/generateIconSass.js
 
-- overwritte value of property sassOutputName of settings object
+- overwritte value of property sassOutputName of config object
 
 
 
