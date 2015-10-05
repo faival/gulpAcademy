@@ -4,5 +4,5 @@ var getEnabledTasks = require('../lib/getEnabledTasks')
 
 gulp.task('default', function(cb) {
   var tasks = getEnabledTasks('watch')
-  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'watch', cb)
+  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'postJS', 'watch', cb)
 })
