@@ -1,9 +1,7 @@
 var config       = require('../config')
 var gutil = require('gulp-util')
 
-gutil.log('postJS.config.tasks.js ' + gutil.colors.green(config.tasks.js));
 if(!config.tasks.js) return
-
 
 var gulp         = require('gulp')
 var browserSync  = require('browser-sync')

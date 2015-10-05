@@ -14,8 +14,6 @@ function prefixStream(timestampText) {
 // plugin level function (dealing with files)
 function gulpPrefixTimestamp(timestampText) {
 
-  gutil.log(gutil.colors.green(timestampText));
-
   if (!timestampText) {
     throw new PluginError(PLUGIN_NAME, 'Missing timestamp text!');
   }

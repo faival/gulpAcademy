@@ -5,6 +5,7 @@ var browserSync = require('browser-sync')
 var changed     = require('gulp-changed')
 var gulp        = require('gulp')
 var imagemin    = require('gulp-imagemin')
+var debug 		= require('gulp-debug')
 var path        = require('path')
 
 var paths = {
@@ -14,6 +15,7 @@ var paths = {
 
 gulp.task('images', function() {
   return gulp.src(paths.src)
+  	.pipe(debug({title: 'images'}))
     .pipe(changed(paths.dest)) // Ignore unchanged files
     .pipe(imagemin()) // Optimize
     .pipe(gulp.dest(paths.dest))

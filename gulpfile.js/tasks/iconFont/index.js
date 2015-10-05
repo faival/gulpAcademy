@@ -7,6 +7,7 @@ var generateIconSass = require('./generateIconSass')
 var handleErrors     = require('../../lib/handleErrors')
 var package          = require('../../../package.json')
 var path             = require('path')
+var debug            = require('gulp-debug')
 
 var fontPath = path.join(config.root.dest, config.tasks.iconFont.dest)
 var cssPath = path.join(config.root.dest, config.tasks.css.dest)
@@ -32,6 +33,7 @@ var settings = {
 
 gulp.task('iconFont', function() {
   return gulp.src(settings.src)
+    .pipe(debug({title: 'iconFont'}))
     .pipe(iconfont(settings.options))
     .on('glyphs', generateIconSass(settings))
     .on('error', handleErrors)

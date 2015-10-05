@@ -5,6 +5,7 @@ var browserSync = require('browser-sync')
 var gulp        = require('gulp')
 var imagemin    = require('gulp-imagemin')
 var svgstore    = require('gulp-svgstore')
+var debug		= require('gulp-debug')
 var path        = require('path')
 
 gulp.task('svgSprite', function() {
@@ -15,6 +16,7 @@ gulp.task('svgSprite', function() {
   }
 
   return gulp.src(settings.src)
+  	.pipe(debug({title: 'svgSprite'}))
     .pipe(imagemin())
     .pipe(svgstore())
     .pipe(gulp.dest(settings.dest))
